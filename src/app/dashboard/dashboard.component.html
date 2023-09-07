@@ -1,0 +1,17 @@
+<div *ngIf="authService.isLogged$ | async">
+
+  <p>Welcome, {{authService.getCurrentUser().email}}</p>
+
+  <p>
+    <button (click)="authService.logout()">logout</button>
+  </p>
+</div>
+
+<div *ngIf="!(authService.isLogged$ | async)">
+  <p>You are currently not logged in</p>
+
+  <p>
+    <button (click)="sso.loginWithSso()">login with sso</button>
+  </p>
+</div>
+

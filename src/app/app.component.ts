@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import {AuthenticationService} from "./service/authentication.service";
+import {Observable} from "rxjs";
+import {SsoService} from "./service/sso.service";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'client1';
+
+  constructor() {
+
+  }
+
 }
