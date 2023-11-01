@@ -1,17 +1,7 @@
-<div *ngIf="authService.isLogged$ | async">
-
-  <p>Welcome, {{authService.getCurrentUser().email}}</p>
-
-  <p>
-    <button (click)="authService.logout()">logout</button>
-  </p>
-</div>
-
-<div *ngIf="!(authService.isLogged$ | async)">
-  <p>You are currently not logged in</p>
-
-  <p>
-    <button (click)="sso.loginWithSso()">login with sso</button>
-  </p>
-</div>
-
+<button class="btn btn-primary" (click)="login()">login</button>
+<button class="btn btn-primary"  (click)="logout()" >logout</button>
+<button class="btn btn-primary" (click)="checkAuth()" >check auth</button>
+<button class="btn btn-primary" (click)="isAuthen()" >is authenticated?</button>
+<button class="btn btn-primary" (click)="getIdToken()" >get id token</button>
+<button class="btn btn-primary" (click)="getAccessToken()" >get access token</button>
+<button class="btn btn-primary" (click)="getUserData()" >get user data</button>
